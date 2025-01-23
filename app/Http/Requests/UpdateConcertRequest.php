@@ -11,6 +11,7 @@ class UpdateConcertRequest extends FormRequest
      */
     public function authorize(): bool
     {
+
         return false;
         // false: permisos solo usuarios autorizados
         // true: permisos a todos los usuarios

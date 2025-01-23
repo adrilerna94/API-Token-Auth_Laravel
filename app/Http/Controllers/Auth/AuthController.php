@@ -65,7 +65,7 @@ class AuthController extends Controller
         // Auth::User() también válido
         // Creamos el token y le damos un nombre 'Auth token'
         // El token también se podría crear en el register
-        $token = auth()->user()->createToken('Auth token');
+        $token = auth()->user()->createToken('Auth token', ['*'], now()->addHours(2));
         // response array
         $res = ['token' => $token, 'plain' => $token->plainTextToken];
 

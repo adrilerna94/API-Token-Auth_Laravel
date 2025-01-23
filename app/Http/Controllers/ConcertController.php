@@ -11,6 +11,12 @@ class ConcertController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    // public function __construct()
+    // {
+    //     // aplicar middleware para todas las acciones del crud
+    //     $this->middleware('auth:sanctum');
+    // }
     public function index()
     {
         $concerts = Concert::with('bands')->get();

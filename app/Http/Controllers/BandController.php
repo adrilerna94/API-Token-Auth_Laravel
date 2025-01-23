@@ -11,6 +11,12 @@ class BandController extends Controller
     /**
      * Display a listing of the resource.
      */
+    // public function __construct()
+    // {
+    //     // aplica el middleware para todas las acciones
+    //     $this->middleware('auth:sanctum');
+    // }
+
     public function index()
     {
         $bands = Band::with('concerts')->get();
